@@ -1,0 +1,5 @@
+# codekit
+.codekit-cache
+.sass-cache
+css
+config.codekit
