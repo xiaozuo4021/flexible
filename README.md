@@ -29,6 +29,7 @@
 ```
 
 这个文件主要的行为是：
+
 1. 添加`<meta name="viewport" ....>`标签
 2. 给html添加`font-size`css属性值和添加`data-dpr`自定义属性
 
@@ -89,10 +90,8 @@ $flexible-dpr: 3; // 自定义dpr
 
 因为`less`不支持自定义函数，除非你使用了`less@3`([mixins-as-functions](https://github.com/less/less-meta/blob/master/proposal/mixins-as-functions.md))
 
-在`flexible.less`文件中，我使用的是hack方式，实现了一个自定义函数的方式。
+在`flexible.less`文件中，我使用了hack方式，实现了一个自定义函数。在2.5版本是没有问题的，如果其他版本出现问题，可以提个`issue`反馈给我。
 
-在2.5版本是没有问题的，如果其他版本出现问题，可以提个`issue`反馈给我。
+在`flexible.less`文件中，还提供了另一个`px2rem`自定义函数实现版本，但是其是基于`less`插件[less-plugin-functions](https://github.com/seven-phases-max/less-plugin-functions)实现的。
 
-在`flexible.less`文件中，还提供了一个`px2rem`自定义函数版本，但是其是基于`less`插件[less-plugin-functions](https://github.com/seven-phases-max/less-plugin-functions)
-
-如果你使用这种版本形式的`px2rem`函数实现。你需要在`webpack`, `gulp`, `grunt`对应`less`插件中，将这个插件引入。
+所以，如果你使用这种版本形式的`px2rem`函数实现。你需要在`webpack`, `gulp`, `grunt`或其他工具对应`less`插件中，将这个插件引入。
