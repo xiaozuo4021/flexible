@@ -1,0 +1,50 @@
+flexible-unit = 75
+flexible-dpr = 2
+
+px2rem(value, width = flexible-unit)
+	if unit(value) == 'em'
+		value
+	else
+		unit(value / width, 'rem')
+
+
+font-dpr(size, dpr = flexible-dpr)
+	if dpr == 1
+		font-size size
+		[data-dpr="2"] &
+			font-size (size*2)
+		[data-dpr="3"] &
+			font-size (size*3)
+	else if dpr == 2
+		font-size (size/2)
+		[data-dpr="2"] &
+			font-size size
+		[data-dpr="3"] &
+			font-size (size*1.5)
+	else
+		font-size (size/3)
+		[data-dpr="2"] &
+			font-size (size*2/3)
+		[data-dpr="3"] &
+			font-size size
+
+
+px-dpr(property, size, rest..., dpr = flexible-dpr)
+	if dpr == 1
+		{property} size rest
+		[data-dpr="2"] &
+			{property} (size*2) rest
+		[data-dpr="3"] &
+			{property} (size*3) rest
+	else if dpr == 2
+		{property} (size/2) rest
+		[data-dpr="2"] &
+			{property} size rest
+		[data-dpr="3"] &
+			{property} (size*1.5) rest
+	else
+		{property} (size/3) rest
+		[data-dpr="2"] &
+			{property} (size*2/3) rest
+		[data-dpr="3"] &
+			{property} size rest
