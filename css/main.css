@@ -1,0 +1,12 @@
+.test {
+  border-radius: 2px solid #ccc;
+  font-size: 4px;
+  border: 0.1rem solid #ccc; }
+  [data-dpr="2"] .test {
+    border-radius: 4px solid #ccc; }
+  [data-dpr="3"] .test {
+    border-radius: 6px solid #ccc; }
+  [data-dpr="2"] .test {
+    font-size: 8px; }
+  [data-dpr="3"] .test {
+    font-size: 12px; }

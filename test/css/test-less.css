@@ -1,0 +1,17 @@
+.test {
+  margin: 0.32rem;
+  font-size: 6px;
+  border-radius: 3px solid #ccc;
+}
+[data-dpr="2"] .test {
+  font-size: 12px;
+}
+[data-dpr="3"] .test {
+  font-size: 18px;
+}
+[data-dpr="2"] .test {
+  border-radius: 6px solid #ccc;
+}
+[data-dpr="3"] .test {
+  border-radius: 9px solid #ccc;
+}

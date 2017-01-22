@@ -1,0 +1,10 @@
+@import '../../flexible.scss';
+
+$flexible-unit: 80px;
+$flexible-dpr: 3;
+
+.test {
+	@include px-dpr(border-radius, 6px, "solid #ccc");
+	@include font-dpr(12px);
+	border: px2rem(8px) solid #ccc;
+}
