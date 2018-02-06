@@ -1,12 +1,12 @@
 // basic
-@flexible-unit: 75;
+@flexible-ue: 750;
 @flexible-dpr: 2;
 
 // less hack function
 @flexible-px2rem: `(function() {
 	// change this function to the basic value
     function px2rem(x) {
-      return x/75;
+      return 10 * x / @flexible-ue;
     }
 
     var less = process.mainModule.children.find(function (child) {

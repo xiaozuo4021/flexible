@@ -1,0 +1,17 @@
+{
+  "name": "flexible",
+  "version": "1.0.0",
+  "main": "min/flexible.min.js",
+  "repository": "https://github.com/blackcater/flexible.git",
+  "author": "blackcater <blackcater2015@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "pro": ""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.39",
+    "@babel/core": "^7.0.0-beta.39",
+    "babel-preset-minify": "^0.3.0"
+  }
+}

@@ -1,5 +1,6 @@
 # codekit
 .codekit-cache
 .sass-cache
-./css
 config.codekit
+node_modules/
+.idea/

@@ -1,11 +1,11 @@
 // basic
-$flexible-unit: 75;
+$flexible-ue: 750;
 $flexible-dpr: 2;
 
 // 将 px 单位 转化为 rem单位值
 // $value {px} 没有单位 会当做 px处理，rem不处理
 // $width 基础值
-@function px2rem($value, $width: $flexible-unit) {
+@function px2rem($value, $width: $flexible-ue) {
 	@if (unit($value) == rem) {
 		@return $value;
 	}
@@ -15,7 +15,7 @@ $flexible-dpr: 2;
         @return px2rem($px + 0px);
 	}
 
-	@return ($value / $width) * 1rem;
+	@return (10 * $value / $width) * 1rem;
 }
 
 // 对于文字，我们不推荐使用 rem 进行，应该使用px特定大小

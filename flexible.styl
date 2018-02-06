@@ -1,11 +1,11 @@
-flexible-unit = 75
+flexible-ue = 750
 flexible-dpr = 2
 
-px2rem(value, width = flexible-unit)
+px2rem(value, width = flexible-ue)
 	if unit(value) == 'em'
 		value
 	else
-		unit(value / width, 'rem')
+		unit(10 * value / width, 'rem')
 
 
 font-dpr(size, dpr = flexible-dpr)
