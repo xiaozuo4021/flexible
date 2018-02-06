@@ -1,12 +1,5 @@
 # flexible移动适配解决方案
 
-你如果对`rem`的适配解决思想不是很了解的话，可以查看这篇博文：
-
-**相关文章**
-
-- [移动页面开发适配方案(上)](http://www.blackcater.win/2017/01/21/移动页面开发适配方案-上/)
-- [移动页面开发适配方案(下)](http://www.blackcater.win/2017/01/22/移动页面开发适配方案-下/)
-
 ## 使用
 
 ### 引入`flexible.js`
@@ -19,15 +12,18 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>flexible移动适配解决方案</title>
-	<meta name="apple-mobile-web-app-capable" content="no">
-	<!-- other meta tags -->
-	<link rel="stylesheet" href="./normalize.css">
-	<script src="./flexible.js"></script>
-	<!-- other script tags -->
+	<title></title>
+	<meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+  <!-- other meta tags -->
+  <link rel="stylesheet" href="./normalize.css">
+  <script src="./flexible.js"></script>
+  <!-- other script tags -->
 </head>
-<body>
-	
+<body style="margin: auto; width: 10rem;">
 </body>
 </html>
 
@@ -51,8 +47,8 @@
 
 **每个文件都提供2个变量：**
 
-1. `flexible-unit` : `rem`适配基准值, 可以通过 `设备宽度 * dpr / 10`进行计算得出。 默认为`75`(iPhone6)
-2. `flexible-dpr` : `dpr`值，默认为`2`(iPhone6)
+1. `flexible-ue` :  设计稿宽度（默认为 iPhone6设计稿，750px）
+2. `flexible-dpr` : 设计稿 dpr 值，默认为`2`(iPhone6)
 
 你可以覆盖这些变量。
 
@@ -68,7 +64,7 @@
 
 @import './flexible.scss'; // 引入文件
 
-$flexible-unit: 80px; // 自定义基准值
+$flexible-ue: 750; // 自定义基准值
 $flexible-dpr: 3; // 自定义dpr
 
 .test {
