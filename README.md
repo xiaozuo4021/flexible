@@ -1,4 +1,6 @@
 # flexible移动适配解决方案
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fblackcater%2Fflexible.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fblackcater%2Fflexible?ref=badge_shield)
+
 
 ## 使用
 
@@ -96,3 +98,7 @@ $flexible-dpr: 3; // 自定义dpr
 在`flexible.less`文件中，还提供了另一个`px2rem`自定义函数实现版本，但是其是基于`less`插件[less-plugin-functions](https://github.com/seven-phases-max/less-plugin-functions)实现的。
 
 所以，如果你使用这种版本形式的`px2rem`函数实现。你需要在`webpack`, `gulp`, `grunt`或其他工具对应`less`插件中，将这个插件引入。
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fblackcater%2Fflexible.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fblackcater%2Fflexible?ref=badge_large)
